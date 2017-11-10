@@ -16,7 +16,8 @@ import {
 export function parseVariableDeclaration() {
 
   let declaration = null;
-  let node = new Node.VariableDeclaration();
+  let node = new Node.VariableDeclaration();// done
+  node.loc = this.current.loc;
 
   if (
     this.peek(TT.VAR) || this.peek(TT.CONST)

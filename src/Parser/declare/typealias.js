@@ -15,7 +15,8 @@ import {
  */
 export function parseTypeAlias() {
 
-  let node = new Node.TypeAliasDeclaration();
+  let node = new Node.TypeAliasDeclaration();// done
+  node.loc = this.current.loc;
 
   this.expect(TT.TYPEALIAS);
 

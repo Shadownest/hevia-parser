@@ -81,7 +81,8 @@ export function parseDeclarationStatement() {
  */
 export function parseInitializer() {
 
-  let node = new Node.InitializerDeclaration();
+  let node = new Node.InitializerDeclaration();// done
+  node.loc = this.current.loc;
 
   this.expect(TT.INIT);
 

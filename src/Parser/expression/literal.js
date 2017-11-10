@@ -17,7 +17,8 @@ import {
  */
 export function parseLiteral() {
 
-  let node = new Node.Literal();
+  let node = new Node.Literal();// done
+  node.loc = this.current.loc;
 
   // Enum access
   if (this.eat(TT.PERIOD)) {
@@ -138,7 +139,8 @@ export function parseLiteralHead() {
  */
 export function parseSpecialLiteral() {
 
-  let node = new Node.Literal();
+  let node = new Node.Literal();// done
+  node.loc = this.current.loc;
 
   node.type = this.current.name;
   node.value = this.current.value;

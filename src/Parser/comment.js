@@ -17,7 +17,8 @@ import * as scan from "../Tokenizer/scanner";
  */
 export function parseComment() {
 
-  let node = new Node.Comment();
+  let node = new Node.Comment();// done
+  node.loc = this.current.loc;
   let type = this.current.type;
 
   node.arguments = this.parseBlockComment(this.current.value);

@@ -56,7 +56,8 @@ export function parseOperator() {
  */
 export function parseOperatorDeclaration(type) {
 
-  let node = new Node.OperatorDeclaration();
+  let node = new Node.OperatorDeclaration();// done
+  node.loc = this.current.loc;
 
   this.expect(TT.OPERATOR);
 
@@ -91,7 +92,8 @@ export function parseOperatorDeclaration(type) {
  */
 export function parsePrecedenceExpression() {
 
-  let node = new Node.PrecedenceExpression();
+  let node = new Node.PrecedenceExpression();// done
+  node.loc = this.current.loc;
 
   this.expect(TT.PRECEDENCE);
 
@@ -106,7 +108,8 @@ export function parsePrecedenceExpression() {
  */
 export function parseAssociativityExpression() {
 
-  let node = new Node.AssociativityExpression();
+  let node = new Node.AssociativityExpression();// done
+  node.loc = this.current.loc;
 
   this.expect(TT.ASSOCIATIVITY);
 

@@ -36,7 +36,8 @@ export function parseLoopStatement() {
  */
 export function parseFor() {
 
-  let node = new Node.ForStatement();
+  let node = new Node.ForStatement();// done
+  node.loc = this.current.loc;
 
   let init = null;
 
@@ -50,7 +51,8 @@ export function parseFor() {
 
   // for (expr) in (expr)
   if (this.eat(TT.IN)) {
-    node = new Node.ForInStatement();
+    node = new Node.ForInStatement();// done
+    node.loc = this.current.loc;
     node.expression = this.parseCondition();
   // for (expr);(expr);(expr)
   } else {
@@ -74,7 +76,8 @@ export function parseFor() {
  */
 export function parseWhile() {
 
-  let node = new Node.WhileStatement();
+  let node = new Node.WhileStatement();// done
+  node.loc = this.current.loc;
 
   this.expect(TT.WHILE);
 
@@ -93,7 +96,8 @@ export function parseWhile() {
  */
 export function parseRepeat() {
 
-  let node = new Node.RepeatStatement();
+  let node = new Node.RepeatStatement();// done
+  node.loc = this.current.loc;
 
   this.expect(TT.REPEAT);
 

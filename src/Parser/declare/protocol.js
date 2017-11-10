@@ -11,7 +11,8 @@ import Node from "../../nodes";
  */
 export function parseProtocol() {
 
-  let node = new Node.ProtocolDeclaration();
+  let node = new Node.ProtocolDeclaration();// done
+  node.loc = this.current.loc;
 
   this.expect(TT.PROTOCOL);
 

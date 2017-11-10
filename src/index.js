@@ -18,7 +18,7 @@ const tokenize = (code, opts) => {
   return (tokenizer.scan(code, opts));
 };
 
-greet();
+//greet();
 
 module.exports = {
   parse,

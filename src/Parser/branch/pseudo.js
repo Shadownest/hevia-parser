@@ -18,7 +18,8 @@ export function parsePseudoProperty() {
     this.peek(TT.DIDSET)
   );
 
-  let node = new Node.PseudoProperty;
+  let node = new Node.PseudoProperty;// done
+  node.loc = this.current.loc;
 
   node.name = this.current.name;
 

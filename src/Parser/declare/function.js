@@ -19,7 +19,8 @@ import {
  */
 export function parseFunction() {
 
-  let node = new Node.FunctionDeclaration();
+  let node = new Node.FunctionDeclaration();// done
+  node.loc = this.current.loc;
 
   // Optional, so dont expect
   this.eat(TT.FUNCTION);

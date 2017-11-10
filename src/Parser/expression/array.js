@@ -16,7 +16,8 @@ import {
  */
 export function parseArrayExpression() {
 
-  let node = new Node.ArrayExpression();
+  let node = new Node.ArrayExpression();// done
+  node.loc = this.current.loc;
 
   let args = [];
 

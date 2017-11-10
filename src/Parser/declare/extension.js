@@ -11,7 +11,8 @@ import Node from "../../nodes";
  */
 export function parseExtension() {
 
-  let node = new Node.ExtensionDeclaration();
+  let node = new Node.ExtensionDeclaration();// done
+  node.loc = this.current.loc;
 
   this.expect(TT.EXTENSION);
 

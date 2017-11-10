@@ -113,7 +113,8 @@ export function reset(tokens) {
  */
 export function parseProgram() {
 
-  let node = new Node.Program();
+  let node = new Node.Program();// done
+  node.loc = this.current.loc;
 
   if (this.current === void 0) return (node);
 
@@ -142,7 +143,8 @@ export function parseProgram() {
  */
 export function parseBlock() {
 
-  let node = new Node.BlockStatement();
+  let node = new Node.BlockStatement();// done
+  node.loc = this.current.loc;
 
   let index = 0;
   let statement = null;

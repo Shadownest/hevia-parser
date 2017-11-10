@@ -32,7 +32,8 @@ export function parseBinaryExpression(index) {
   left = state !== void 0 ? this.parseBinaryExpression(index + 1) : this.parseExpression();
 
   while (this.acceptPrecedence(state)) {
-    node = new Node.BinaryExpression();
+    node = new Node.BinaryExpression();// done
+    node.loc = this.current.loc;
     node.operator = TT[state.op];
     this.next();
     node.left = left;

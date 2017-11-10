@@ -11,7 +11,8 @@ import Node from "../../nodes";
  */
 export function parseStruct() {
 
-  let node = new Node.StructureDeclaration();
+  let node = new Node.StructureDeclaration();// done
+  node.loc = this.current.loc;
 
   this.expect(TT.STRUCT);
 

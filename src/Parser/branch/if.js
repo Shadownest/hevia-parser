@@ -11,8 +11,8 @@ import Node from "../../nodes";
  */
 export function parseIfStatement() {
 
-  let node = new Node.IfStatement();
-
+  let node = new Node.IfStatement();// done
+  node.loc = this.current.loc;
   if (this.eat(TT.IF)) {
     node.test = this.parseCondition();
   }

@@ -113,7 +113,8 @@ export function parseStatement() {
  */
 export function parseReturnStatement() {
 
-  let node = new Node.ReturnStatement();
+  let node = new Node.ReturnStatement();// done
+  node.loc = this.current.loc;
 
   this.expect(TT.RETURN);
 

@@ -61,7 +61,8 @@ export function parseChaining(node) {
  */
 export function parseMemberExpression(base) {
 
-  let node = new Node.MemberExpression();
+  let node = new Node.MemberExpression();// done
+  node.loc = this.current.loc;
 
   node.isComputed = this.peek(TT.LBRACK);
 
@@ -74,7 +75,8 @@ export function parseMemberExpression(base) {
   if (node.isComputed && this.eat(TT.COMMA)) {
     let args = this.parseCommaSeperatedValues();
     args.unshift(node.property);
-    let tmp = new Node.ArrayExpression();
+    let tmp = new Node.ArrayExpression();// done
+    tmp.loc = this.current.loc;
     tmp.argument = args;
     node.property = tmp;
   }
@@ -94,7 +96,8 @@ export function parseMemberExpression(base) {
  */
 export function parseCallExpression(base) {
 
-  let node = new Node.CallExpression();
+  let node = new Node.CallExpression();// done
+  node.loc = this.current.loc;
 
   node.callee = base;
   node.arguments = this.parseArguments();
@@ -108,7 +111,8 @@ export function parseCallExpression(base) {
  */
 export function parseTernaryExpression(base) {
 
-  let node  = new Node.TernaryExpression();
+  let node  = new Node.TernaryExpression();// done
+  node.loc = this.current.loc;
 
   node.test = base;
 

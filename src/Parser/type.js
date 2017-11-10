@@ -15,7 +15,8 @@ import {
  */
 export function parseType(base) {
 
-  let node = new Node.TypeExpression();
+  let node = new Node.TypeExpression();// done
+  node.loc = this.current.loc;
 
   node.name = base;
 
@@ -72,7 +73,8 @@ export function parseTupleType() {
 
 export function parseGeneric() {
 
-  let node = new Node.GenericClause();
+  let node = new Node.GenericClause();// done
+  node.loc = this.current.loc;
 
   this.expect(TT.LT);
 

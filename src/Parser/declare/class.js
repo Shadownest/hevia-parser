@@ -15,7 +15,8 @@ import {
  */
 export function parseClass() {
 
-  let node = new Node.ClassDeclaration();
+  let node = new Node.ClassDeclaration();// done
+  node.loc = this.current.loc;
 
   this.expect(TT.CLASS);
 

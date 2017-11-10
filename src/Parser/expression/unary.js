@@ -18,7 +18,8 @@ import {
  */
 export function parseUnaryExpression(base) {
 
-  let node = new Node.UnaryExpression();
+  let node = new Node.UnaryExpression();// done
+  node.loc = this.current.loc;
 
   node.isPrefix = this.isPrefixOperator(this.current);
   node.operator = TT[this.parseLiteralHead()];

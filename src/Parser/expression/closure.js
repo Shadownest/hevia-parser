@@ -16,7 +16,8 @@ import {
  */
 export function parseClosureExpression() {
 
-  let node = new Node.ClosureExpression();
+  let node = new Node.ClosureExpression();// done
+  node.loc = this.current.loc;
 
   this.expect(TT.LBRACE);
 
@@ -45,7 +46,8 @@ export function parseClosureExpression() {
  */
 export function parseFunctionExpression(node) {
 
-  let tmp = new Node.FunctionExpression();
+  let tmp = new Node.FunctionExpression();// done
+  tmp.loc = this.current.loc;
   tmp.type = this.parseTypeExpression();
 
   if (!(tmp.type instanceof Array)) {

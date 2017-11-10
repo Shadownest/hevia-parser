@@ -11,7 +11,8 @@ import Node from "../../nodes";
  */
 export function parseImport() {
 
-  let node = new Node.ImportDeclaration();
+  let node = new Node.ImportDeclaration();// done
+  node.loc = this.current.loc;
 
   this.expect(TT.IMPORT);
 
